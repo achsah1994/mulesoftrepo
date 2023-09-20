@@ -18,7 +18,7 @@ jobs:
     - uses: actions/cache@v1
       with:
         path: ~/.m2/repository
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        key: ${{ runner.os }}-maven-${{ hashFiles('**atest/pom.xml') }}
         restore-keys: |
           ${{ runner.os }}-maven-
     
@@ -31,7 +31,7 @@ jobs:
       run: mvn help:effective-settings
     
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn -B package --file atest/pom.xml
     
     - name: Stamp artifact file name with commit hash
       run: |
@@ -57,7 +57,7 @@ jobs:
     - uses: actions/cache@v1
       with:
         path: ~/.m2/repository
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        key: ${{ runner.os }}-maven-${{ hashFiles('**atest/pom.xml') }}
         restore-keys: |
           ${{ runner.os }}-maven-
     
