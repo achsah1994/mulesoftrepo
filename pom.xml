@@ -33,12 +33,14 @@
 				   <configuration>
       <cloudHubDeployment>
          <username>${username}</username>
-         <password>${password}</password>         
+         <password>${password}</password> 
+	 <businessGroup>${businessGroup}</businessGroup>
          <workers>${workers}</workers>
          <workerType>${worker.type}</workerType>
          <environment>${environment}</environment>
          <muleVersion>${mule.version}</muleVersion>
          <applicationName>${application.name}</applicationName>
+	    
       </cloudHubDeployment>
    </configuration>
 			</plugin>
