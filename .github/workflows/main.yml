@@ -78,6 +78,6 @@ jobs:
          -Dworkers=1 \
          -Dworker.type=Micro \
          -Denvironment=Sandbox \
-         -Dmule.version=4.2.2 \
+         -Dmule.version=4.4.0 \
          -Dapplication.name=testmule 
          -DskipTests
