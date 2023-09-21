@@ -73,7 +73,8 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
       run: |
-        artifactName=$(ls atest | head -1)
+      working-directory: ./atest
+        artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy \
          -Dmule.artifact=$artifactName \
          -Dusername="$USERNAME" \
