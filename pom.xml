@@ -32,7 +32,7 @@
 				<extensions>true</extensions>
 				   <configuration>
       <cloudHubDeployment>
-	      <url>https://anypoint.mulesoft.com</url>
+	      <uri>https://anypoint.mulesoft.com</uri>
          <username>${username}</username>
          <password>${password}</password> 
 	 <businessGroup>${businessGroup}</businessGroup>
