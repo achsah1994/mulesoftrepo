@@ -64,7 +64,7 @@ jobs:
     - uses: actions/download-artifact@master
       with:
         name: artifacts
-        path: atest/*.jar
+        path: atest
     
     - name: Deploy to Sandbox
       env:
