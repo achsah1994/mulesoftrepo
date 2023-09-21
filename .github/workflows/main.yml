@@ -53,6 +53,7 @@ jobs:
     steps:    
     
     - uses: actions/checkout@v2
+
     
     - uses: actions/cache@v1
       with:
@@ -67,11 +68,12 @@ jobs:
         path: atest
     
     - name: Deploy to Sandbox
+    
       env:
         USERNAME: ${{ secrets.USERNAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
       run: |
-        artifactName=$(ls atest/*.jar | head -1)
+        artifactName=$(ls atest | head -1)
         mvn deploy -DmuleDeploy \
          -Dmule.artifact=$artifactName \
          -Dusername="$USERNAME" \
