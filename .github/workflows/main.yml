@@ -82,6 +82,6 @@ jobs:
          -Dworker.type=Micro \
          -Denvironment=Sandbox \
          -Dmule.version=4.4.0 \
-         -Dapplication.name=mymule \
+         -Dapplication.name=mymule-cicd-iq \
          -DbusinessGroup="$ANYPOINT_ORG_ID" 
          -DskipTests
